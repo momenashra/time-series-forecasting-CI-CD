@@ -21,3 +21,8 @@ build out python project scaffold :
 *  Dockerfile
 *  Command-line=tool
 *  Microservice
+
+1. Create Venv: `python3 -m venv ~/.time`
+2. edit my  `~/.bashrc.sh` to source it automatically `~/.time/bin/activate`
+3. 
+4. 
