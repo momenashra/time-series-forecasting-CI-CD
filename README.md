@@ -1,3 +1,5 @@
+[![Test Multiple Python Versions](https://github.com/momenashra/time-series-forecasting-CI-CD/actions/workflows/Continous_integration.yml/badge.svg)](https://github.com/momenashra/time-series-forecasting-CI-CD/actions/workflows/Continous_integration.yml)
+
 # time-series-forecasting-CI-CD
 ![ci-cd](https://github.com/user-attachments/assets/a0f705be-b0c3-453e-8908-84ae13eda607)
 
