@@ -9,7 +9,7 @@
 * Project : Machine Learning and Deep learning Models for Predicting Sales in 3 different cities
 * Project Description This project uses machine learning algorithms to predict sales for retail products based on historical data. The model leverages various features such as product category, location, and time of year.
 * Technologies Used :
-* ‎requirements.txt [https://github.com/momenashra/time-series-forecasting-CI-CD/commit/46227957f717f42140f1844ce96e27f582704d81]
+* ‎requirements.txt [https://github.com/momenashra/time-series-forecasting-CI-CD/blob/46227957f717f42140f1844ce96e27f582704d81/requirements.txt]
 ### Github Codespaces 
 build out python project scaffold :
 *  Makefile
