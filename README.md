@@ -9,12 +9,7 @@
 * Project : Machine Learning and Deep learning Models for Predicting Sales in 3 different cities
 * Project Description This project uses machine learning algorithms to predict sales for retail products based on historical data. The model leverages various features such as product category, location, and time of year.
 * Technologies Used :
-colab ,
-Python 3.x ,
-Pandas ,
-scikit-learn ,
-TensorFlow ,
-NumPy
+* ‎requirements.txt [https://github.com/momenashra/time-series-forecasting-CI-CD/commit/46227957f717f42140f1844ce96e27f582704d81]
 ### Github Codespaces 
 build out python project scaffold :
 *  Makefile
@@ -26,5 +21,6 @@ build out python project scaffold :
 
 1. Create Venv: `python3 -m venv ~/.time`
 2. edit my  `~/.bashrc.sh` to source it automatically `~/.time/bin/activate`
-3. 
-4. 
+3. Clone my repo : `git clone https://github.com/momenashra/time-series-forecasting-CI-CD.git`
+4. Run make all
+* Your are done! 
