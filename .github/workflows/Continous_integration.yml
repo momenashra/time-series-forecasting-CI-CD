@@ -24,3 +24,10 @@ jobs:
       - name: Format code with Python Black
         run: |
           make format
+      - name: deploy with AWS
+        run: |
+          make deploy
+      - name: Run all
+        run: |
+          make all
+          
