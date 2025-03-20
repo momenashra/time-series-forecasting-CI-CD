@@ -26,25 +26,6 @@ except Exception as e:
 @app.route('/')
 def welcome():
     return "Welcome to Time-Series Forecasting API"
-@app.route('/values', methods=["GET"])
-def predict_forecast():
-    """
-    Predict Future Values in Time-Series
-    """
-    if forecaster is None:
-        return jsonify({"error": "Model not loaded. Train or load the model first."})
-
-    try:
-        steps = request.args.get("forecast_horizon", default=10, type=int)  # Default to 10 steps
-        
-        # Ensure the input matches the training shape (1 sample, 720 features)
-        steps_array = np.random(1, 720)  # Create a dummy input with 720 features
-        prediction = forecaster.predict(steps_array)  # Pass correctly shaped input
-        
-        return jsonify({"forecast": prediction.tolist()})
-    except Exception as e:
-        return jsonify({"error": str(e)})
-
 @app.route('/predict', methods=["POST"])
 def predict_from_file():
     """

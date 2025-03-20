@@ -34,49 +34,6 @@ except Exception as e:
 })
 def welcome():
     return "Welcome to Time-Series Forecasting API"
-
-@app.route('/g', methods=["GET"])
-@swag_from({
-    'parameters': [
-        {
-            'name': 'forecast_horizon',
-            'in': 'query',
-            'type': 'integer',
-            'default': 10,
-            'required': False,
-            'description': 'Number of steps to forecast (default: 10)'
-        }
-    ],
-    'responses': {
-        200: {
-            'description': 'Predicted future values',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'forecast': {'type': 'array', 'items': {'type': 'number'}}
-                }
-            }
-        }
-    }
-})
-def predict_forecast():
-    """
-    Predict Future Values in Time-Series
-    """
-    if forecaster is None:
-        return jsonify({"error": "Model not loaded. Train or load the model first."})
-
-    try:
-        steps = request.args.get("forecast_horizon", default=10, type=int)  # Default to 10 steps
-        
-        # Ensure the input matches the training shape (1 sample, 720 features)
-        steps_array = np.random(1, 720)  # Create a dummy input with 720 features
-        prediction = forecaster.predict(steps_array)  # Pass correctly shaped input
-        
-        return jsonify({"forecast": prediction.tolist()})
-    except Exception as e:
-        return jsonify({"error": str(e)})
-
 @app.route('/', methods=["POST"])
 @swag_from({
     'parameters': [
