@@ -15,19 +15,19 @@ jobs:
       - name: Install dependencies
         run: |
           make install
+      - name: Format code with Python Black
+        run: |
+          make format
       - name: Lint with pylint
         run: |
           make lint
       - name: Test with pytest
         run: |
           make test
-      - name: Format code with Python Black
-        run: |
-          make format
       - name: deploy with AWS
         run: |
           make deploy
-      - name: Run all
-        run: |
-          make all
+      # - name: Run all
+      #   run: |
+      #     make all
           
