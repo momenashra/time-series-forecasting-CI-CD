@@ -38,7 +38,7 @@ def predict_forecast():
         steps = request.args.get("forecast_horizon", default=10, type=int)  # Default to 10 steps
         
         # Ensure the input matches the training shape (1 sample, 720 features)
-        steps_array = np.random((1, 720))  # Create a dummy input with 720 features
+        steps_array = np.random(1, 720)  # Create a dummy input with 720 features
         prediction = forecaster.predict(steps_array)  # Pass correctly shaped input
         
         return jsonify({"forecast": prediction.tolist()})
