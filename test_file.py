@@ -12,7 +12,7 @@ from utils import (
     convert_dates_to_days_since_reference,
     weighted_rmse,
 )
-
+np.random.seed(42)  # or any integer
 # Sample Data for Testing
 df_sample = pd.DataFrame(
     {
