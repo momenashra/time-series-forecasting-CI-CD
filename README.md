@@ -17,10 +17,14 @@ build out python project scaffold :
 *  test_library.py
 *  Dockerfile
 *  Command-line=tool
-*  Microservice
+*  Microservice (flask-flaskegger)
 
 1. Create Venv: `python3 -m venv ~/.time`
 2. edit my  `~/.bashrc.sh` to source it automatically `~/.time/bin/activate`
 3. Clone my repo : `git clone https://github.com/momenashra/time-series-forecasting-CI-CD.git`
 4. Run make all
+5. Run `python flask_app_UI.py`
+6. go to you local web browser and past `http://127.0.0.1:5000/apidocs`
+7. upload test file `test.csv`
+8. Now excute! 
 * Your are done! 
