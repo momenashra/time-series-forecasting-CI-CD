@@ -1,0 +1,4 @@
+https://humble-potato-x7p6qp5qgjrfrjv-5000.app.github.dev/apidocs/
+# to open swagger api 
+X-Github-Token: ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#to add auth token on postman

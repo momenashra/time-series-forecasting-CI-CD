@@ -10,18 +10,28 @@ import numpy as np
 import pickle
 import pandas as pd
 from flasgger import Swagger, swag_from
+import os
 
 # Initialize Flask App
 app = Flask(__name__)
 Swagger(app)
 
+# Define forecaster as a global variable
+forecaster = None
+
 # Load the trained forecasting model
-try:
-    with open("forecaster.pkl", "rb") as model_file:
-        forecaster = pickle.load(model_file)
-except Exception as e:
-    print(f"Error loading model: {e}")
-    forecaster = None  # Prevent errors if the model fails to load
+model_path = "forecaster.pkl"
+
+if not os.path.exists(model_path):
+    print(f"❌ Model file {model_path} NOT found in container!")
+else:
+    try:
+        with open(model_path, "rb") as f:
+            forecaster = pickle.load(f)
+            print("✅ Model loaded successfully!")
+    except Exception as e:
+        print(f"❌ Model loading failed: {e}")
+        forecaster = None
 
 @app.route('/h')
 @swag_from({
@@ -34,6 +44,7 @@ except Exception as e:
 })
 def welcome():
     return "Welcome to Time-Series Forecasting API"
+
 @app.route('/', methods=["POST"])
 @swag_from({
     'parameters': [
@@ -61,6 +72,9 @@ def predict_from_file():
     """
     Predict Future Values from Uploaded Time-Series File
     """
+    # Use the global forecaster variable
+    global forecaster
+
     if forecaster is None:
         return jsonify({"error": "Model not loaded. Train or load the model first."})
 
