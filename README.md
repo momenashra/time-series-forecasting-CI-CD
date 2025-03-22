@@ -18,7 +18,7 @@ build out python project scaffold :
 *  Dockerfile
 *  Command-line=tool
 *  Microservice (flask-flaskegger)
-
+### option 1 :
 1. Create Venv: `python3 -m venv ~/.time`
 2. edit my  `~/.bashrc.sh` to source it automatically `~/.time/bin/activate`
 3. Clone my repo : `git clone https://github.com/momenashra/time-series-forecasting-CI-CD.git`
@@ -26,5 +26,8 @@ build out python project scaffold :
 5. Run `python flask_app_UI.py`
 6. go to you local web browser and past `http://127.0.0.1:5000/apidocs`
 7. upload test file `test.csv`
-8. Now excute! 
-* Your are done! 
+8. Now excute & Your are done!
+9. ### option 2 :
+* You can also easily pull mu docker iamge from docker-hub using this command `docker pull momenamuhammed/time_series_forecasting:latest`
+* It will make every thing for you!
+
