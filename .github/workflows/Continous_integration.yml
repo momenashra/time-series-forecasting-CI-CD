@@ -27,7 +27,7 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t momenamuhammed/time_series_forecasting:latest .
-      - name: Push image to Registry (docker hub )
+      - name: Push image to Registry (Docker-hub)
         run: |
           docker push momenamuhammed/time_series_forecasting:latest
       - name: deploy with AWS ESC
